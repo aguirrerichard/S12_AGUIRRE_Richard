@@ -6,10 +6,15 @@
     --blanco: #FFFFFF; 
     --texto: #425466; 
     --sombra: 0 10px 30px rgba(0,0,0,0.08); 
+    background-color: var(--fondo); 
+    color: var(--texto); 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
 }
 .pg-recibos * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-.pg-recibos { background-color: var(--fondo); color: var(--texto); display: flex; flex-direction: column; min-height: 100vh; }
 .pg-recibos a { text-decoration: none; }
+
 .pg-recibos header { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; background: rgba(10,37,64,0.95); backdrop-filter: blur(10px); transition: all 0.3s ease; }
 .pg-recibos header.scrolled { background: rgba(10, 37, 64, 0.98) !important; padding: 12px 5%; box-shadow: var(--sombra); }
 .pg-recibos .logo-container { display: flex; align-items: center; gap: 12px; }
@@ -18,8 +23,10 @@
 .pg-recibos nav a { color: var(--blanco); }
 .pg-recibos nav ul { display: flex; gap: 20px; list-style: none; }
 .pg-recibos nav a.activo { font-weight: 600; color: var(--acento); }
+
 .pg-recibos .banner-interno { background: var(--primario); padding: 120px 5% 60px; text-align: center; color: white; }
 .pg-recibos .banner-interno h1 { font-size: 2.5rem; margin-bottom: 10px; }
+
 .pg-recibos .contenedor-cuenta { padding: 50px 10%; flex: 1; display: flex; flex-direction: column; align-items: center; gap: 40px; }
 .pg-recibos .caja-busqueda { background: var(--blanco); padding: 40px; border-radius: 12px; box-shadow: var(--sombra); width: 100%; max-width: 600px; text-align: center; }
 .pg-recibos .caja-busqueda h2 { color: var(--primario); margin-bottom: 10px; }
@@ -31,79 +38,23 @@
 .pg-recibos .msg-error { color: #ef4444; font-size: 0.78rem; font-weight: 600; margin-top: 4px; text-align: left; display: block; }
 .pg-recibos .btn-buscar { background: var(--secundario); color: white; border: none; padding: 0 25px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.3s; }
 .pg-recibos .btn-buscar:hover { background: var(--primario); }
+
 .pg-recibos .resultado-simulado { background: var(--blanco); border-radius: 12px; box-shadow: var(--sombra); width: 100%; max-width: 800px; overflow: hidden; border-top: 5px solid #ef4444; display: none; }
 .pg-recibos .cabecera-recibo { background: #f8fafc; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; }
 .pg-recibos .cabecera-recibo h3 { color: var(--primario); }
 .pg-recibos .estado-pendiente { background: #fef2f2; color: #ef4444; padding: 5px 12px; border-radius: 20px; font-weight: 600; font-size: 14px; }
-.pg-recibos .cuerpo-recibo { display: flex; padding: 30px; gap: 30px; }
+.pg-recibos .cuerpo-recibo { display: flex; padding: 30px; gap: 30px; align-items: center; }
 .pg-recibos .datos-cliente { flex: 1; }
 .pg-recibos .datos-cliente p { margin-bottom: 10px; }
 .pg-recibos .monto-deuda { background: #f8fafc; padding: 25px; border-radius: 10px; text-align: center; min-width: 250px; border: 1px dashed #cbd5e1; }
+.pg-recibos .monto-deuda h4 { color: #64748b; font-size: 0.9em; text-transform: uppercase; }
 .pg-recibos .monto-deuda h2 { color: #ef4444; font-size: 2.5rem; margin: 10px 0; }
+
 .pg-recibos .acciones-recibo { padding: 20px 30px; background: #f8fafc; display: flex; gap: 15px; justify-content: flex-end; border-top: 1px solid #e2e8f0; }
-.pg-recibos .btn-pagar { background: #10b981; color: white; border: none; padding: 12px 25px; border-radius: 6px; font-weight: 600; cursor: pointer; }
-.pg-recibos .btn-descargar { background: var(--texto); color: white; border: none; padding: 12px 25px; border-radius: 6px; font-weight: 600; cursor: pointer; }
-.pg-recibos footer { background: var(--primario); color: white; text-align: center; padding: 20px; margin-top: auto; }
-.pg-recibos { background-color: #f1f5f9; font-family: sans-serif; margin: 0; }
-.pg-recibos header { background: #0a2540; color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; position: fixed; top: 0; width: 100%; box-sizing: border-box; z-index: 100; }
-.pg-recibos header a { color: white; text-decoration: none; font-weight: bold; }
-.pg-recibos .contenedor-cuenta { 
-            max-width: 600px; 
-            margin: 130px auto 50px auto; 
-            padding: 0 20px;
-        }
-.pg-recibos .caja-busqueda {
-            background: white;
-            padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-.pg-recibos .caja-busqueda h2 { margin-top: 0; color: #0f172a; }
-.pg-recibos .barra-busqueda {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-            justify-content: center;
-        }
-.pg-recibos .barra-busqueda input {
-            padding: 12px 15px;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            width: 65%;
-            font-size: 16px;
-            outline: none;
-        }
-.pg-recibos .barra-busqueda input:focus { border-color: #0066ff; }
-.pg-recibos .btn-buscar {
-            background: #0066ff;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-.pg-recibos .btn-buscar:hover { background: #0052cc; }
-.pg-recibos .resultado-simulado {
-            display: none; 
-            background: white;
-            margin-top: 30px;
-            border-radius: 12px;
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-.pg-recibos .cabecera-recibo { background: #0a2540; color: white; padding: 15px 25px; display: flex; justify-content: space-between; align-items: center; }
-.pg-recibos .cabecera-recibo h3 { margin: 0; }
-.pg-recibos .estado-pendiente { background: #ef4444; color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85em; font-weight: bold; }
-.pg-recibos .cuerpo-recibo { padding: 25px; display: flex; justify-content: space-between; align-items: center; }
-.pg-recibos .monto-deuda h4 { margin: 0; color: #64748b; font-size: 0.9em; text-transform: uppercase; }
-.pg-recibos .monto-deuda h2 { margin: 5px 0 0 0; color: #0f172a; font-size: 2.2em; }
-.pg-recibos .acciones-recibo { padding: 20px; background: #f8fafc; border-top: 1px solid #e2e8f0; display: flex; gap: 15px; justify-content: flex-end; }
-.pg-recibos .btn-accion { padding: 10px 20px; border-radius: 6px; font-weight: 600; text-decoration: none; color: white; transition: 0.3s; }
-.pg-recibos .btn-pagar { background: #10b981; }
+.pg-recibos .btn-accion { padding: 12px 25px; border-radius: 6px; font-weight: 600; color: white; transition: 0.3s; display: inline-flex; align-items: center; gap: 8px; }
+.pg-recibos .btn-pagar { background: #10b981; color: white; border: none; padding: 12px 25px; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; }
 .pg-recibos .btn-pagar:hover { background: #059669; }
-.pg-recibos .btn-descargar { background: #475569; }
+.pg-recibos .btn-descargar { background: var(--texto); color: white; border: none; padding: 12px 25px; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s; }
 .pg-recibos .btn-descargar:hover { background: #334155; }
+
+.pg-recibos footer { background: var(--primario); color: white; text-align: center; padding: 20px; margin-top: auto; }
