@@ -8,22 +8,43 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Protege todos los íconos de Font Awesome 6 (sólidos, regulares y marcas como Visa/Mastercard) */
-.fa, .fas, .far, .fal, .fab,
-.fa-solid, .fa-regular, .fa-light, .fa-brands,
-[class^="fa-"], [class*=" fa-"] {
+/* Especificidad máxima para anular ".pg-inicio *" y similares en producción */
+html body [class*="pg-"] i[class*="fa-"],
+html body [class*="pg-"] i[class*="fa-"]::before,
+html body i.fa-solid,
+html body i.fa-solid::before,
+html body i.fas,
+html body i.fas::before,
+html body i.fa-regular,
+html body i.fa-regular::before,
+html body i.far,
+html body i.far::before,
+html body i.fa-brands,
+html body i.fa-brands::before,
+html body i.fab,
+html body i.fab::before {
   font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+  font-style: normal !important;
 }
 
-.fa-solid, .fas {
+html body [class*="pg-"] i.fa-solid,
+html body [class*="pg-"] i.fa-solid::before,
+html body [class*="pg-"] i.fas,
+html body [class*="pg-"] i.fas::before {
   font-weight: 900 !important;
 }
 
-.fa-regular, .far {
+html body [class*="pg-"] i.fa-regular,
+html body [class*="pg-"] i.fa-regular::before,
+html body [class*="pg-"] i.far,
+html body [class*="pg-"] i.far::before {
   font-weight: 400 !important;
 }
 
-.fa-brands, .fab {
+html body [class*="pg-"] i.fa-brands,
+html body [class*="pg-"] i.fa-brands::before,
+html body [class*="pg-"] i.fab,
+html body [class*="pg-"] i.fab::before {
   font-family: "Font Awesome 6 Brands" !important;
   font-weight: 400 !important;
 }
