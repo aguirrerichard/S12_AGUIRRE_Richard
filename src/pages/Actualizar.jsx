@@ -17,18 +17,6 @@ export default function Actualizar() {
   const [edicion, setEdicion] = useState(null);     // { reclamo, comentario, tipoMedidor, km, mensaje }
   const [guardando, setGuardando] = useState(false);
 
-  const cargar = useCallback(async () => {
-    try {
-      setReclamos(await listarMisReclamos(usuario.id));
-      setEstado("ok");
-    } catch (error) {
-      console.error("Error al obtener reclamos propios:", error);
-      setEstado("error");
-    }
-  }, [usuario.id]);
-
-  useEffect(() => { cargar(); }, [cargar]);
-
   function abrirEdicion(r) {
     setEdicion({
       reclamo: r,
