@@ -1,0 +1,55 @@
+.pg-tramites { 
+    --primario: #0A2540; 
+    --secundario: #0077FF; 
+    --acento: #FF7A00; 
+    --fondo: #F4F7F9; 
+    --blanco: #FFFFFF; 
+    --texto: #425466; 
+    --sombra: 0 10px 30px rgba(0,0,0,0.08); 
+}
+.pg-tramites * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+.pg-tramites { background-color: var(--fondo); color: var(--texto); display: flex; flex-direction: column; min-height: 100vh; }
+.pg-tramites a { text-decoration: none; transition: all 0.3s ease; }
+.pg-tramites ul { list-style: none; }
+.pg-tramites #menu-principal { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    padding: 15px 5%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: var(--primario);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-bottom: 4px solid var(--acento); 
+}
+.pg-tramites .logo-container { display: flex; align-items: center; gap: 12px; }
+.pg-tramites .logo-box { background: var(--acento); color: var(--blanco); padding: 8px 12px; border-radius: 6px; font-size: 20px; font-weight: 700;}
+.pg-tramites #menu-principal h1 { color: var(--blanco) !important; font-size: 22px; font-weight: 700; }
+.pg-tramites nav ul { display: flex; gap: 25px; align-items: center; }
+.pg-tramites nav a { color: var(--blanco) !important; font-weight: 500; font-size: 15px; position: relative; padding-bottom: 5px; }
+.pg-tramites nav a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0; background-color: var(--acento); transition: width 0.3s ease; }
+.pg-tramites nav a:not(.btn-nav):hover::after,
+.pg-tramites nav a.activo:not(.btn-nav)::after { width: 100%; }
+.pg-tramites .btn-nav { background-color: var(--acento); color: var(--blanco) !important; padding: 8px 20px; border-radius: 25px; font-weight: 600; transition: background 0.3s ease, transform 0.2s ease; }
+.pg-tramites .btn-nav:hover { background-color: #e66e00; transform: translateY(-2px); }
+.pg-tramites .btn-nav::after { display: none !important; }
+.pg-tramites .usuario-header-box { display: inline-flex; align-items: center; gap: 12px; }
+.pg-tramites .usuario-header-link { color: var(--blanco) !important; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 6px; }
+.pg-tramites .usuario-header-link i { color: var(--acento); font-size: 1.15rem; }
+.pg-tramites .btn-cerrar-header { background: #ef4444; color: var(--blanco); border: none; padding: 6px 14px; border-radius: 20px; font-weight: 600; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.3s ease; }
+.pg-tramites .btn-cerrar-header:hover { background: #dc2626; transform: translateY(-2px); }
+.pg-tramites .contenedor-formulario { padding: 120px 10% 50px; display: flex; justify-content: center; flex: 1; }
+.pg-tramites .caja-formulario { background: var(--blanco); padding: 40px; border-radius: 12px; box-shadow: var(--sombra); width: 100%; max-width: 600px; }
+.pg-tramites .caja-formulario h3 { color: var(--primario); margin: 25px 0 15px; border-bottom: 2px solid var(--fondo); padding-bottom: 10px; }
+.pg-tramites .caja-formulario h3:first-child { margin-top: 0; }
+.pg-tramites .grupo-input { margin-bottom: 20px; }
+.pg-tramites .grupo-input label { display: block; margin-bottom: 8px; font-weight: 500; font-size: 14px; }
+.pg-tramites .grupo-input input { width: 100%; padding: 12px; border: 2px solid #cbd5e1; border-radius: 6px; outline: none; font-size: 15px; transition: all 0.3s ease; }
+.pg-tramites .grupo-input input:focus { border-color: var(--secundario); box-shadow: 0 0 0 3px rgba(0,119,255,0.1); }
+.pg-tramites .btn-enviar { background: var(--primario); color: white; border: none; padding: 15px; width: 100%; border-radius: 6px; font-weight: 600; font-size: 16px; cursor: pointer; transition: 0.3s; }
+.pg-tramites .btn-enviar:hover { background: var(--secundario); }
+/* Dentro del Layout: ocupa el espacio disponible y deja el footer abajo */
+.pg-tramites { flex: 1 0 auto; min-height: 0; }

@@ -1,0 +1,19 @@
+# Dependencias y compilados
+node_modules
+dist
+dist-ssr
+
+# Variables de entorno (nunca subir secretos)
+.env
+.env.*
+!.env.example
+*.local
+
+# Logs y editores
+logs
+*.log
+npm-debug.log*
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store

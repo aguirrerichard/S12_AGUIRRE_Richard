@@ -1,0 +1,33 @@
+.pg-comprobante { --primario: #0A2540; --secundario: #0077FF; --acento: #FF7A00; --fondo: #F4F7F9; --verde: #059669; --texto: #425466; }
+.pg-comprobante * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+.pg-comprobante { background: var(--fondo); color: var(--texto); line-height: 1.6; min-height: 100vh; }
+.pg-comprobante a { text-decoration: none; }
+.pg-comprobante a:focus-visible,
+.pg-comprobante button:focus-visible { outline: 3px solid var(--secundario); outline-offset: 2px; }
+.pg-comprobante header { display: flex; justify-content: space-between; align-items: center; padding: 14px 5%; background: var(--primario); border-bottom: 4px solid var(--acento); }
+.pg-comprobante .logo-container { display: flex; align-items: center; gap: 12px; }
+.pg-comprobante .logo-box { background: var(--acento); color: #fff; padding: 8px 13px; font-size: 22px; border-radius: 8px; }
+.pg-comprobante .logo-texto { color: #fff; font-size: 22px; font-weight: 700; }
+.pg-comprobante header nav a { color: #fff; font-weight: 500; }
+.pg-comprobante main { max-width: 560px; margin: 0 auto; padding: 40px 20px 60px; }
+.pg-comprobante h1 { color: var(--primario); font-size: 1.7rem; margin-bottom: 18px; text-align: center; }
+.pg-comprobante #comprobante { background: #fff; border: 2px dashed #cbd5e1; border-radius: 14px; padding: 28px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
+.pg-comprobante .sello { text-align: center; font-weight: 700; letter-spacing: 2px; color: var(--verde); border: 2px solid var(--verde); border-radius: 8px; padding: 6px; margin-bottom: 18px; }
+.pg-comprobante dl { display: grid; grid-template-columns: auto 1fr; gap: 8px 18px; }
+.pg-comprobante dt { font-weight: 600; color: var(--primario); }
+.pg-comprobante dd { text-align: right; word-break: break-word; }
+.pg-comprobante .acciones { display: flex; gap: 14px; justify-content: center; margin-top: 24px; flex-wrap: wrap; }
+.pg-comprobante .acciones button,
+.pg-comprobante .acciones a { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 0.95rem; cursor: pointer; border: 2px solid var(--primario); }
+.pg-comprobante .acciones button { background: var(--primario); color: #fff; }
+.pg-comprobante .acciones button:hover { background: var(--acento); border-color: var(--acento); }
+.pg-comprobante .acciones a { background: transparent; color: var(--primario); }
+.pg-comprobante .acciones a:hover { background: #e2e8f0; }
+@media print {
+.pg-comprobante header,
+.pg-comprobante nav,
+.pg-comprobante .acciones { display: none; }
+.pg-comprobante { background: #fff; color: #000; }
+.pg-comprobante main { padding: 0; max-width: none; }
+.pg-comprobante #comprobante { border: 1px solid #000; box-shadow: none; padding: 1rem; }
+}
